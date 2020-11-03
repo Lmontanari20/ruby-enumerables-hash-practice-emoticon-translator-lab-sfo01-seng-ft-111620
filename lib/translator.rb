@@ -17,12 +17,10 @@ end
 def get_japanese_emoticon(directory, emote)
   # code goes here
   hash = load_library(directory)
-  hash.each { |name, array|
-    if hash[name][0] == emote
-      return hash[name][1]
-    elsif hash[name][1] == emote
-      return hash[name][1]
-    end
+  hash.each { |name, hash|
+    if hash[name][:japanese] == emote
+      
+    
   }
   "Sorry, that emoticon was not found"
 end
